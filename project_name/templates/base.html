@@ -22,7 +22,11 @@
     <![endif]-->
 
     <!-- This file store project specific CSS -->
-    <link href="{% templatetag openvariable %} STATIC_URL {% templatetag closevariable %}css/project.css" rel="stylesheet">
+    <link href="{% templatetag openvariable %} STATIC_URL {% templatetag closevariable %}css/screen.css" media="screen" rel="stylesheet">
+	<link href="{% templatetag openvariable %} STATIC_URL {% templatetag closevariable %}css/print.css" media="print" rel="stylesheet">
+	<!--[if IE]>
+	<link href="{% templatetag openvariable %} STATIC_URL {% templatetag closevariable %}css/ie.css" type="text/css"/>
+	<![endif]-->
 
     <!-- Use this to quickly test CSS changes in a template, 
         then move to project.css -->
@@ -39,7 +43,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Project name</a>
+          <a class="brand" href="#">{{ project_name }}</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
